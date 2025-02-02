@@ -2,6 +2,7 @@ import { BACKEND_URL_MOVIES } from "../const";
 import inMemoryJWT from "../../utils/inMemoryJWT";
 import axios from "axios";
 
+console.log("BACKEND_URL_MOVIES", BACKEND_URL_MOVIES);
 const MoviesClient = axios.create({
   baseURL: BACKEND_URL_MOVIES,
 });

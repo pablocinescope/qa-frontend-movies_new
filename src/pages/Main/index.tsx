@@ -3,7 +3,7 @@ import { useQuery } from "@tanstack/react-query";
 
 import { Button } from "../../views/button";
 import MoviesService from "../../api/MovieService";
-import MovieCard from "../../components/MovieCard";
+import { MovieCard } from "../../components";
 
 function Main() {
   const { data } = useQuery({
@@ -13,7 +13,6 @@ function Main() {
     }),
   });
 
-  console.log("ff", data)
   const { movies } = data || {};
 
   if (!Array.isArray(movies) || movies?.length === 0) {
